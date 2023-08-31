@@ -18,6 +18,9 @@ const ColorForm: FC<{
         <div className="flex flex-col gap-1">
           <label className="text-xl font-light">Pick a Name</label>
           <input
+            autoFocus
+            required
+            maxLength={15}
             type="text"
             value={color.name}
             onChange={(e) =>
