@@ -20,9 +20,11 @@ const recipes: RecipeType[] = [
       "Remove from oven.",
       "Add the lettuce and serve.",
     ],
+    rating: 4,
+    maxRating: 5,
   },
   {
-    name: "FIsh Tacos",
+    name: "Fish Tacos",
     ingredients: [
       { name: "Whitefish", amount: 1, measurement: "l lb" },
       { name: "Cheese", amount: 1, measurement: "cup" },
@@ -35,6 +37,8 @@ const recipes: RecipeType[] = [
       "Place the fish on he 3 tortillas.",
       "Top them with lettuce, tomatoes and cheese.",
     ],
+    rating: 3,
+    maxRating: 5,
   },
 ];
 
