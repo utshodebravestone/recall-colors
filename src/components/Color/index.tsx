@@ -3,13 +3,13 @@ import ColorType from "./types";
 import Rating from "../Rating";
 import { FaEdit, FaTrash } from "react-icons/fa";
 import ColorForm from "../ColorForm";
+import useColor from "../../hooks/useColor";
 
 const Color: FC<{
   color: ColorType;
-  onColorChange: (color: ColorType) => void;
-  onDelete: (id: number) => void;
-}> = ({ color, onColorChange, onDelete }) => {
+}> = ({ color }) => {
   const { id, name, value, rating, maxRating } = color;
+  const { onColorChange, onDelete } = useColor();
   const [modalActive, setModalActive] = useState(false);
 
   return (

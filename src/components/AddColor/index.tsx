@@ -2,10 +2,9 @@ import { FC, useState } from "react";
 import ColorType from "../Color/types";
 import ColorForm from "../ColorForm";
 import random from "../../utils/random";
+import useColor from "../../hooks/useColor";
 
-const AddColor: FC<{ onAddColor: (color: ColorType) => void }> = ({
-  onAddColor,
-}) => {
+const AddColor: FC = () => {
   const color: ColorType = {
     id: random(),
     name: "white",
@@ -13,6 +12,7 @@ const AddColor: FC<{ onAddColor: (color: ColorType) => void }> = ({
     rating: 0,
     maxRating: 5,
   };
+  const { onAddColor } = useColor();
   const [modalActive, setModalActive] = useState(false);
 
   return (
