@@ -19,7 +19,9 @@ export const ColorContext = createContext<ColorContextType>({
   },
 });
 
-const ColorProvider: FC<{ children: JSX.Element[] }> = ({ children }) => {
+const ColorProvider: FC<{
+  children: JSX.Element | JSX.Element[];
+}> = ({ children }) => {
   const [colors, setColors] = useState<ColorType[]>(
     getColorsFromLocalStorage()
   );
@@ -37,6 +39,7 @@ const ColorProvider: FC<{ children: JSX.Element[] }> = ({ children }) => {
 
   useEffect(() => {
     setColorsToLocalStorage(colors);
+    // setColors(filter(getColorsFromLocalStorage()));
   }, [colors]);
 
   return (

@@ -7,8 +7,8 @@ import useColor from "../../hooks/useColor";
 const AddColor: FC = () => {
   const color: ColorType = {
     id: random(),
-    name: "white",
-    value: "#ffffff",
+    name: "black",
+    value: "#000000",
     rating: 0,
     maxRating: 5,
   };
@@ -19,7 +19,7 @@ const AddColor: FC = () => {
     <div className="w-full py-5 flex flex-col justify-center items-center">
       <button
         onClick={() => setModalActive(true)}
-        className="px-8 py-4 bg-blue-500 text-white font-bold text-xl rounded-md border border-blue-500 hover:bg-transparent hover:text-blue-500 transition-colors duration-500"
+        className="px-8 py-4 bg-blue-600 text-white font-bold text-xl rounded-md border border-blue-600 hover:bg-transparent hover:text-blue-600 transition-colors duration-500"
       >
         Add a Color
       </button>

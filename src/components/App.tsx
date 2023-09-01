@@ -1,15 +1,22 @@
-import ColorList from "./ColorList";
-import AddColor from "./AddColor";
+import { Route, Routes } from "react-router-dom";
+import Home from "../pages/Home";
+import SortColors from "../pages/SortColors";
+import NotFound from "../pages/NotFound";
+import Navigation from "./Navigation";
 import ColorProvider from "../contexts/Color";
 
 const App = () => {
   return (
-    <div className="p-6 min-h-screen min-w-screen">
+    <>
+      <Navigation />
       <ColorProvider>
-        <AddColor />
-        <ColorList />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/sort" element={<SortColors />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </ColorProvider>
-    </div>
+    </>
   );
 };
 
