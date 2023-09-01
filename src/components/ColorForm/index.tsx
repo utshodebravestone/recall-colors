@@ -24,7 +24,10 @@ const ColorForm: FC<{
             type="text"
             value={color.name}
             onChange={(e) =>
-              setColor((color) => ({ ...color, name: e.target.value }))
+              setColor((color) => ({
+                ...color,
+                name: e.target.value.toLowerCase(),
+              }))
             }
             className="p-2 border border-gray-300 rounded focus:outline-none"
           />

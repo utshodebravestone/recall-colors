@@ -1,7 +1,10 @@
-import { FC, JSX, createContext, useState } from "react";
-import _colors from "../../data/colors";
+import { FC, JSX, createContext, useEffect, useState } from "react";
 import ColorContextType from "./types";
 import ColorType from "../../components/Color/types";
+import {
+  getColorsFromLocalStorage,
+  setColorsToLocalStorage,
+} from "../../apis/Color";
 
 export const ColorContext = createContext<ColorContextType>({
   colors: [],
@@ -17,7 +20,9 @@ export const ColorContext = createContext<ColorContextType>({
 });
 
 const ColorProvider: FC<{ children: JSX.Element[] }> = ({ children }) => {
-  const [colors, setColors] = useState(_colors);
+  const [colors, setColors] = useState<ColorType[]>(
+    getColorsFromLocalStorage()
+  );
 
   const onAddColor = (color: ColorType): void =>
     setColors((colors) => [...colors, color]);
@@ -29,6 +34,10 @@ const ColorProvider: FC<{ children: JSX.Element[] }> = ({ children }) => {
 
   const onDelete = (id: number): void =>
     setColors((colors) => colors.filter((color) => color.id != id));
+
+  useEffect(() => {
+    setColorsToLocalStorage(colors);
+  }, [colors]);
 
   return (
     <ColorContext.Provider
