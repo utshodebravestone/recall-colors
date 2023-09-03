@@ -3,6 +3,7 @@ import ColorType from "../Color/types";
 import ColorForm from "../ColorForm";
 import random from "../../utils/random";
 import useColor from "../../hooks/useColor";
+import { FaPlus } from "react-icons/fa";
 
 const AddColor: FC = () => {
   const color: ColorType = {
@@ -19,9 +20,9 @@ const AddColor: FC = () => {
     <div className="w-full py-5 flex flex-col justify-center items-center">
       <button
         onClick={() => setModalActive(true)}
-        className="px-8 py-4 bg-blue-600 text-white font-bold text-xl rounded-md border border-blue-600 hover:bg-transparent hover:text-blue-600 transition-colors duration-500"
+        className="p-4 bg-blue-600 text-white font-bold text-xl rounded-md border border-blue-600 hover:opacity-80 transition-opacity duration-500"
       >
-        Add a Color
+        <FaPlus />
       </button>
       {modalActive && (
         <ColorForm

@@ -41,7 +41,9 @@ const Navigation: FC = () => {
           </NavLink>
         </li>
       </ul>
-      <h1 className="text-4xl font-light flex items-end gap-2">React Colors</h1>
+      <h1 className="text-4xl font-light flex items-end gap-2">
+        Recall Colors
+      </h1>
     </div>
   );
 };
