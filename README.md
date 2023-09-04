@@ -1,3 +1,3 @@
 # Recall Colors
 
-Can't remember what that color was? Save it in Recall Colors.
+Recall Colors allows you save information about Color.
