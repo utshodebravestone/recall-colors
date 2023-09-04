@@ -16,7 +16,7 @@ const ColorForm: FC<{
         className="w-50 p-10 flex flex-col items-start justify-center gap-4 bg-white rounded"
       >
         <div className="flex flex-col gap-1">
-          <label className="text-xl font-light">Pick a Name</label>
+          <label className="text-xl font-light">Set a Name</label>
           <input
             autoFocus
             required
@@ -44,7 +44,7 @@ const ColorForm: FC<{
           />
         </div>
         <div className="flex flex-col gap-1">
-          <label className="text-xl font-light">Pick a Rating</label>
+          <label className="text-xl font-light">Give a Rating</label>
           <Rating
             rating={color.rating}
             maxRating={color.maxRating}

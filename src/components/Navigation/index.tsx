@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const Navigation: FC = () => {
   return (
-    <div className="bg-slate-50 py-3 px-5 shadow-md mb-7 flex justify-between items-center">
+    <div className="max-h-[11vh] bg-slate-50 py-3 px-5 shadow-md mb-10 flex justify-between items-center">
       <ul>
         <li>
           <NavLink
@@ -34,10 +34,10 @@ const Navigation: FC = () => {
                   : ""
               } hover:text-slate-500 transition-all duration-300`
             }
-            to="/sort"
+            to="/colors"
           >
             <FaTrophy size={20} />
-            Sort Colors
+            Colors
           </NavLink>
         </li>
       </ul>

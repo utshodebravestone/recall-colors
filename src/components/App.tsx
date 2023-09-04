@@ -1,9 +1,9 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "../pages/Home";
-import SortColors from "../pages/SortColors";
 import NotFound from "../pages/NotFound";
 import Navigation from "./Navigation";
 import ColorProvider from "../contexts/Color";
+import Colors from "../pages/Colors";
 
 const App = () => {
   return (
@@ -12,7 +12,7 @@ const App = () => {
       <ColorProvider>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/sort" element={<SortColors />} />
+          <Route path="/colors" element={<Colors />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </ColorProvider>

@@ -17,10 +17,10 @@ const AddColor: FC = () => {
   const [modalActive, setModalActive] = useState(false);
 
   return (
-    <div className="w-full py-5 flex flex-col justify-center items-center">
+    <div className="w-full py-2 flex flex-col justify-center items-center">
       <button
         onClick={() => setModalActive(true)}
-        className="p-4 bg-blue-600 text-white font-bold text-xl rounded-md border border-blue-600 hover:opacity-80 transition-opacity duration-500"
+        className="p-4 text-black font-bold text-xl rounded-md border border-slate-300 hover:scale-105 transition-transform duration-500"
       >
         <FaPlus />
       </button>
