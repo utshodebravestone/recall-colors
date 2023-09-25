@@ -6,8 +6,8 @@ const Home: FC = () => {
   const colorsIsEmpty = useColor().colors.length == 0;
 
   return (
-    <div className="h-[80vh] w-full flex flex-col justify-center items-center">
-      <h1 className="text-7xl font-light">Recall Colors</h1>
+    <div className="h-[80vh] w-full mx-1 flex flex-col justify-center items-center">
+      <h1 className="text-5xl font-light">Recall Colors</h1>
       <p className="mt-4 pt-2 border-t border-slate-300 text-xl font-light text-center">
         How many times have you came across a color only to forget about it?
         <br />
